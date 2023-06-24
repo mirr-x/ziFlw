@@ -3,7 +3,7 @@
 this project is a python script that automates the process of gaining followers on all the social media-accounts like instagram or twiter or facebook and others . . .
 
 
-## -->  Follow the steps below to install and run the code  <--
+## Follow the steps below to install and run the code 
 
 
 
