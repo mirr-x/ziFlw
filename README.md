@@ -1,4 +1,7 @@
-# follwors-bot script
+# !!! NOT WORKING ANY MORE !!!
+
+
+## follwors-bot script 
 
 this project is a python script that automates the process of gaining followers on all the social media-accounts like instagram or twiter or facebook and others . . .
 
