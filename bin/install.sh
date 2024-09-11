@@ -52,15 +52,16 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     echo "export LIKE4LIKE_USERNAME=\"$USERNAME\"" >> ~/.bashrc
     read -p "$(echo -e ${FMT_LIM_PURPLE} - Enter the Password: ${NC})" PASSWORD
     echo "export LIKE4LIKE_PASSWORD=\"$PASSWORD\"" >> ~/.bashrc
-    echo -e "\n${FMT_LIM_YELLOW}   ⚠️    Create an account on https://x.com${NC}                ⚠️ \n"
-    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the Cookies (JSON): ${NC}")" COOKIES_X
+    echo -e "\n${FMT_LIM_YELLOW}   ⚠️    create fake accounts${NC}    ⚠️ \n"
+    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the twitter Cookies (JSON): ${NC}")" COOKIES_X
     echo "export TWITTER_COOKIES=\"$COOKIES_X\"" >> ~/.bashrc
-    echo -e "\n${FMT_LIM_YELLOW}   ⚠️    Create an account on https://www.instagram.com${NC}    ⚠️ \n"
-    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the Cookies (JSON): ${NC}")" COOKIES_IG
+    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the instagram Cookies (JSON): ${NC}")" COOKIES_IG
     echo "export INSTA_COOKIES=\"$COOKIES_IG\"" >> ~/.bashrc
-    echo -e "\n${FMT_LIM_YELLOW}   ⚠️    Create an account on https://www.facebook.com${NC}     ⚠️ \n"
-    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the Cookies (JSON): ${NC}")" COOKIES_FB
+    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the facebook Cookies (JSON): ${NC}")" COOKIES_FB
     echo "export FACE_COOKIES=\"$COOKIES_FB\"" >> ~/.bashrc
+    echo -e "\n${FMT_LIM_YELLOW}   ⚠️    Prepare the discord WEbHOOK${NC}    ⚠️ \n"
+    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the discord Webhook: ${NC}")" WEBHOOK
+    echo "export DISCORD_WEBHOOK_URL=\"$WEBHOOK\"" >> ~/.bashrc
 fi
 
 # move the binary to the bin directory
