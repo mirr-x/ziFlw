@@ -4,6 +4,9 @@ from models import Banner, webdriver, BotPoints
 from selenium.webdriver.firefox.options import Options
 from models import PrinteDiscord
 import os
+from keep_alive import keep_alive
+
+keep_alive()
 
 if __name__ == "__main__":
     Banner().display_info()
