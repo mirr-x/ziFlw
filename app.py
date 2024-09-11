@@ -7,10 +7,9 @@ import os
 
 if __name__ == "__main__":
     Banner().display_info()
-    # options = Options()
-    # options.add_argument("--headless")
-    # browser = webdriver.Firefox(options=options)
-    browser = webdriver.Firefox()
+    options = Options()
+    options.add_argument("--headless")
+    browser = webdriver.Firefox(options=options)
     bot = BotPoints(browser, username_like4like=os.environ['LIKE4LIKE_USERNAME'], password_like4like=os.environ['LIKE4LIKE_PASSWORD'])
     bot.login_like4like()
     # @llllllllllllllllogin
