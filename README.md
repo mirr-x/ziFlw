@@ -14,7 +14,29 @@
 - Sends notifications to Discord using webhooks
 - Customizable and extendable
 
+##  FILES STRUCTER
+```sh
+├── app.py
+└── models
+    ├── __init__.py
+    ├── discordPrinte.py
+    ├── display_banner.py
+    ├── earningPointsBot.py
+    ├── faceBot.py
+    ├── instaBot.py
+    ├── services.py
+    └── twitterBot.py
+
+1 directories, 9 files
+```
+
 ## INSTALLATION
+* **FOR `bash` :**
+
+    ```sh
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install.sh)"
+    ```
+
 
 
 ## LICENSE
