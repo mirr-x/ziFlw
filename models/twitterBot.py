@@ -10,7 +10,8 @@ class TwitterBot:
     def login_twitter_with_cookies(self):
         browser = self.browser
         browser.get('https://twitter.com')
-        time.sleep(6)
+        #time.sleep(6)
+        time.sleep(20)
 
         # load an cookies json from a environment variable
         cookies = json.loads(os.environ['TWITTER_COOKIES'])
@@ -22,14 +23,18 @@ class TwitterBot:
 
         # Refresh the page to log in with cookies
         browser.refresh()
-        time.sleep(6)
+        #time.sleep(6)
+        time.sleep(20)
 
     def unfollow_twitter_bot(self):
         browser = self.browser
         browser.get('https://x.com/lowprofiletires/following')
-        time.sleep(6)
+        #time.sleep(6)
+        time.sleep(20)
 
         browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/main/div/div/div/div[1]/div/section/div/div/div[1]/div/div/button/div/div[2]/div[1]/div[2]/button/div/span/span').click()
-        time.sleep(6)
+        #time.sleep(6)
+        time.sleep(20)
         browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div[2]/button[1]/div/span/span').click()
-        time.sleep(6)
+        #time.sleep(6)
+        time.sleep(20)

@@ -32,7 +32,8 @@ class BotPoints(TwitterBot, Service, InstaBot, FaceBot):
     def login_like4like(self):
         browser = self.browser
         browser.get('https://www.like4like.org/login/')
-        time.sleep(6)
+        #time.sleep(6)
+        time.sleep(20)
 
         username_input = browser.find_element(By.NAME, 'username')
         password_input = browser.find_element(By.NAME, 'password')
@@ -41,4 +42,5 @@ class BotPoints(TwitterBot, Service, InstaBot, FaceBot):
         password_input.send_keys(self.password_like4like)
         browser.find_element(By.CSS_SELECTOR, 'span.button').click()
 
-        time.sleep(6)
+        #time.sleep(6)
+        time.sleep(20)
