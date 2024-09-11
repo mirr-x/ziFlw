@@ -63,6 +63,7 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
         [[ $line == "" ]] && break
         TWITTER_COOKIES+="$line\n"
     done
+    echo "export TWITTER_COOKIES=\"$TWITTER_COOKIES\"" >> ~/.bashrc
 
     # Read multi-line input for Instagram cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Instagram Cookies (JSON): ${NC}"
@@ -71,6 +72,7 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
         [[ $line == "" ]] && break
         INSTAGRAM_COOKIES+="$line\n"
     done
+    echo "export INSTA_COOKIES=\"$INSTAGRAM_COOKIES\"" >> ~/.bashrc
 
     # Read multi-line input for Facebook cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Facebook Cookies (JSON): ${NC}"
@@ -79,11 +81,13 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
         [[ $line == "" ]] && break
         FACEBOOK_COOKIES+="$line\n"
     done
+    echo "export FACE_COOKIES=\"$FACEBOOK_COOKIES\"" >> ~/.bashrc
     echo -e "\n${FMT_LIM_YELLOW}  Prepare the discord WEbHOOK${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     read -p "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the discord Webhook: ${NC}")" WEBHOOK
     echo "export DISCORD_WEBHOOK_URL=\"$WEBHOOK\"" >> ~/.bashrc
 fi
+source ~/.bashrc
 
 sleep 1
 
