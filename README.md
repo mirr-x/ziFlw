@@ -1,53 +1,22 @@
-# !!! NOT WORKING ANY MORE !!!
+# ziFlw 
+
+![xx](image/b.gif)
 
 
-## follwors-bot script 
+## OVERVIEW
 
-this project is a python script that automates the process of gaining followers on all the social media-accounts like instagram or twiter or facebook and others . . .
+`ziFlw` is a Python application that automates interactions on popular social media platforms like Twitter, Instagram, and Facebook. It leverages Selenium for browser automation and can perform various tasks, including liking posts, following users, and more. It also has the capability to send notifications to a Discord channel using webhooks. This tool is particularly useful for earning points on the target website. 
 
+### FEATURES
 
-## Follow the steps below to install and run the code 
+- Automates social media interactions (like, follow, retweet)
+- Uses Selenium for browser automation
+- Sends notifications to Discord using webhooks
+- Customizable and extendable
 
-
-
-
-###  Prerequisites :
-
-
-  - Python: Make sure you have Python installed on your machine. You can download it from the official Python website: [python.org](https://www.python.org).
-
-###  Installation :
-
-  1. Clone the repository or download the code files to your local machine.
-
-  2. Install the required dependencies by running the following command in your terminal or command prompt:
-
-                                                           pip install selenium
+## INSTALLATION
 
 
-  3. Download the web driver for your browser. This script is currently set up to use the Firefox web driver.
-     - If you don't have it already, download the geckodriver executable compatible with your Firefox version.
+## LICENSE
 
-
-  
-     - Firefox geckodriver: [github.com/mozilla/geckodriver](https://github.com/mozilla/geckodriver)
-
-      Make sure to place the geckodriver executable in a location accessible from the system's PATH environment variable.
-
-###  Usage :
-
-  1. Open the code file in a text editor.
-
-  2. Set up your login credentials by replacing `'userName'` and `'passWord'` with your actual Twitter and like4like.org login credentials in the code.
-
-  3. Save the code file.
-
-  4. now you can run it. 
-
-
-
-<kbd style="font-size: 18px; color: red;">Note:</kbd>
- -Please note that automating actions on websites may violate their terms of service, 
-  so use such scripts responsibly and ensure that you comply with the policies of the platforms you're interacting with.
-
-If you encounter any issues or have questions, feel free to contact me.
+*This project is licensed under the MIT License. See the LICENSE file for details.*
