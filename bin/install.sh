@@ -23,7 +23,7 @@ FMT_LIM_PINK="\033[38;5;163m"
 # Define the path to the project
 TARGET_DIR="/home/$USER/ziFlw"
 BIN_DIR="/home/$USER/.local/bin"
-PY="/home/$USER/ziflw/app.py"
+PY="/home/$USER/ziFlw/app.py"
 
 # Check if the directory exists and remove it
 if [ -d "$TARGET_DIR" ]; then
