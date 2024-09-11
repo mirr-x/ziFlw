@@ -20,19 +20,18 @@ if __name__ == "__main__":
         PrinteDiscord('```diff\n- twiter login ❌ \n```')
         exit()
     PrinteDiscord('```diff\n+ twiter login ✅ \n```')
-    # try:
-    #     bot.login_insta_with_cookies()
-    # except Exception:
-    #     PrinteDiscord('```diff\n- instagram login ❌ \n```')
-    #     exit()
-    # PrinteDiscord('```diff\n+ instagram login ✅ \n```')
-    # try:
-    #     bot.login_face_with_cookies()
-    # except Exception:
-    #     PrinteDiscord('```diff\n- facebook login ❌ \n```')
-    #     exit()
-    # PrinteDiscord('```diff\n+ facebook login ✅ \n```')
+    try:
+        bot.login_insta_with_cookies()
+    except Exception:
+        PrinteDiscord('```diff\n- instagram login ❌ \n```')
+        exit()
+    PrinteDiscord('```diff\n+ instagram login ✅ \n```')
+    try:
+        bot.login_face_with_cookies()
+    except Exception:
+        PrinteDiscord('```diff\n- facebook login ❌ \n```')
+        exit()
+    PrinteDiscord('```diff\n+ facebook login ✅ \n```')
     # @llllllllllllllllogin
     while True:
-        bot.earnPoints_Twiter_Retweet()
-        # bot.service_run()  # ? wait 120 minutes
+        bot.service_run()  # ? wait 120 minutes

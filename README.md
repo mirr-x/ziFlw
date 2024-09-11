@@ -34,7 +34,7 @@
 * **FOR `bash` :**
 
     ```sh
-    sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install.sh)"
     ```
 
 
