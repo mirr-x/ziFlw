@@ -47,15 +47,16 @@ sleep 1
 # Fill the environment variables
 read -p "$(echo -e ${FMT_BOLD}Do you want to build the project? [Y/n]: ${NC})" BUILD
 if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
-    echo -e "\n${FMT_LIM_YELLOW}   ⚠️    Create an account on https://www.like4like.org${NC}    ⚠️ \n"
-    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the Username: ${NC}")" USERNAME
+    echo -e "\n${FMT_LIM_YELLOW}  Create an account on https://www.like4like.org${NC}    ⚠️ \n"
+    echo -e "   │"
+    read -p "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the Username: ${NC}")" USERNAME
     echo "export LIKE4LIKE_USERNAME=\"$USERNAME\"" >> ~/.bashrc
-    read -p "$(echo -e ${FMT_LIM_PURPLE} - Enter the Password: ${NC})" PASSWORD
+    read -p "$(echo -e ${FMT_LIM_PURPLE}   └────────Enter the Password: ${NC})" PASSWORD
     echo "export LIKE4LIKE_PASSWORD=\"$PASSWORD\"" >> ~/.bashrc
-    echo -e "\n${FMT_LIM_YELLOW}   ⚠️    create fake accounts${NC}    ⚠️ \n"
+    echo -e "\n${FMT_LIM_YELLOW}  create fake accounts${NC}    ⚠️ \n"
 
     # Read multi-line input for Twitter cookies
-    echo -e "${FMT_BOLD}Enter the Twitter Cookies (JSON): ${NC}"
+    echo -e "${FMT_BOLD}   └────────Enter the Twitter Cookies (JSON): ${NC}"
     TWITTER_COOKIES=""
     while IFS= read -r line; do
         [[ $line == "" ]] && break
@@ -63,7 +64,7 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     done
 
     # Read multi-line input for Instagram cookies
-    echo -e "${FMT_BOLD}Enter the Instagram Cookies (JSON): ${NC}"
+    echo -e "${FMT_BOLD}   └────────Enter the Instagram Cookies (JSON): ${NC}"
     INSTAGRAM_COOKIES=""
     while IFS= read -r line; do
         [[ $line == "" ]] && break
@@ -71,14 +72,14 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     done
 
     # Read multi-line input for Facebook cookies
-    echo -e "${FMT_BOLD}Enter the Facebook Cookies (JSON): ${NC}"
+    echo -e "${FMT_BOLD}   └────────Enter the Facebook Cookies (JSON): ${NC}"
     FACEBOOK_COOKIES=""
     while IFS= read -r line; do
         [[ $line == "" ]] && break
         FACEBOOK_COOKIES+="$line\n"
     done
-    echo -e "\n${FMT_LIM_YELLOW}   ⚠️    Prepare the discord WEbHOOK${NC}    ⚠️ \n"
-    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the discord Webhook: ${NC}")" WEBHOOK
+    echo -e "\n${FMT_LIM_YELLOW}  Prepare the discord WEbHOOK${NC}    ⚠️ \n"
+    read -p "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the discord Webhook: ${NC}")" WEBHOOK
     echo "export DISCORD_WEBHOOK_URL=\"$WEBHOOK\"" >> ~/.bashrc
 fi
 
