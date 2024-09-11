@@ -53,16 +53,36 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     read -p "$(echo -e ${FMT_LIM_PURPLE} - Enter the Password: ${NC})" PASSWORD
     echo "export LIKE4LIKE_PASSWORD=\"$PASSWORD\"" >> ~/.bashrc
     echo -e "\n${FMT_LIM_YELLOW}   ⚠️    create fake accounts${NC}    ⚠️ \n"
-    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the twitter Cookies (JSON): ${NC}")" COOKIES_X
-    echo "export TWITTER_COOKIES=\"$COOKIES_X\"" >> ~/.bashrc
-    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the instagram Cookies (JSON): ${NC}")" COOKIES_IG
-    echo "export INSTA_COOKIES=\"$COOKIES_IG\"" >> ~/.bashrc
-    read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the facebook Cookies (JSON): ${NC}")" COOKIES_FB
-    echo "export FACE_COOKIES=\"$COOKIES_FB\"" >> ~/.bashrc
+
+    # Read multi-line input for Twitter cookies
+    echo -e "${FMT_BOLD}Enter the Twitter Cookies (JSON): ${NC}"
+    TWITTER_COOKIES=""
+    while IFS= read -r line; do
+        [[ $line == "" ]] && break
+        TWITTER_COOKIES+="$line\n"
+    done
+
+    # Read multi-line input for Instagram cookies
+    echo -e "${FMT_BOLD}Enter the Instagram Cookies (JSON): ${NC}"
+    INSTAGRAM_COOKIES=""
+    while IFS= read -r line; do
+        [[ $line == "" ]] && break
+        INSTAGRAM_COOKIES+="$line\n"
+    done
+
+    # Read multi-line input for Facebook cookies
+    echo -e "${FMT_BOLD}Enter the Facebook Cookies (JSON): ${NC}"
+    FACEBOOK_COOKIES=""
+    while IFS= read -r line; do
+        [[ $line == "" ]] && break
+        FACEBOOK_COOKIES+="$line\n"
+    done
     echo -e "\n${FMT_LIM_YELLOW}   ⚠️    Prepare the discord WEbHOOK${NC}    ⚠️ \n"
     read -p "$(echo -e "${FMT_LIM_PURPLE} - Enter the discord Webhook: ${NC}")" WEBHOOK
     echo "export DISCORD_WEBHOOK_URL=\"$WEBHOOK\"" >> ~/.bashrc
 fi
+
+sleep 1
 
 # move the binary to the bin directory
 chmod +x $PY
