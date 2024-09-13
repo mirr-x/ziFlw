@@ -24,6 +24,9 @@ FMT_LIM_PINK="\033[38;5;163m"
 TARGET_DIR="/home/$USER/ziFlw"
 BIN_DIR="/home/$USER/.local/bin"
 PY="/home/$USER/ziFlw/app.py"
+X_COOKIEPATH="/home/$USER/ziFlw/cookies"
+IG_COOKIEPATH="/home/$USER/ziFlw/cookies"
+FB_COOKIEPATH="/home/$USER/ziFlw/cookies"
 
 # Check if the directory exists and remove it
 if [ -d "$TARGET_DIR" ]; then
@@ -63,7 +66,9 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
         [[ $line == "" ]] && break
         TWITTER_COOKIES+="$line\n"
     done
-    echo "export TWITTER_COOKIES=\"$TWITTER_COOKIES\"" >> ~/.bashrc
+    mkdir -p $X_COOKIEPATH && touch $X_COOKIEPATH/X_cookie.json
+    echo $TWITTER_COOKIES > $X_COOKIEPATH/X_cookie.json
+    
 
     # Read multi-line input for Instagram cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Instagram Cookies (JSON): ${NC}"
@@ -72,7 +77,8 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
         [[ $line == "" ]] && break
         INSTAGRAM_COOKIES+="$line\n"
     done
-    echo "export INSTA_COOKIES=\"$INSTAGRAM_COOKIES\"" >> ~/.bashrc
+    mkdir -p $IG_COOKIEPATH && touch $IG_COOKIEPATH/IG_cookie.json
+    echo $INSTAGRAM_COOKIES > $IG_COOKIEPATH/IG_cookie.json
 
     # Read multi-line input for Facebook cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Facebook Cookies (JSON): ${NC}"
@@ -81,7 +87,9 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
         [[ $line == "" ]] && break
         FACEBOOK_COOKIES+="$line\n"
     done
-    echo "export FACE_COOKIES=\"$FACEBOOK_COOKIES\"" >> ~/.bashrc
+    mkdir -p $FB_COOKIEPATH && touch $FB_COOKIEPATH/FB_cookie.json
+    echo $FACEBOOK_COOKIES > $FB_COOKIEPATH/FB_cookie.json
+
     echo -e "\n${FMT_LIM_YELLOW}  Prepare the discord WEbHOOK${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     read -p "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the discord Webhook: ${NC}")" WEBHOOK

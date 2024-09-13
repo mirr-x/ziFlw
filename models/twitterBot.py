@@ -13,13 +13,14 @@ class TwitterBot:
         #time.sleep(6)
         time.sleep(20)
 
-        # load an cookies json from a environment variable
-        cookies = json.loads(os.environ['TWITTER_COOKIES'])
-
-        for cookie in cookies:
-            if 'sameSite' in cookie and cookie['sameSite'] not in ["Strict", "Lax", "None"]:
-                del cookie['sameSite']
-            browser.add_cookie(cookie)
+        # load an cookies json from a file
+        with open('/home/$USER/ziFlw/cookies/X_cookie.json', 'r') as file:
+            cookies = json.load(file)
+            # Add cookies to the browser
+            for cookie in cookies:
+                if 'sameSite' in cookie and cookie['sameSite'] not in ["Strict", "Lax", "None"]:
+                    del cookie['sameSite']
+                browser.add_cookie(cookie)
 
         # Refresh the page to log in with cookies
         browser.refresh()
