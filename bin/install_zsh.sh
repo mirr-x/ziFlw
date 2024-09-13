@@ -42,16 +42,16 @@ sleep 1
 mkdir -p "$CONFIG_DIR"
 
 # Fill the environment variables
-echo -e "$(echo -e ${FMT_BOLD}Do you want to build the project? [Y/n]: ${NC})"
+echo -e "${FMT_BOLD}Do you want to build the project? [Y/n]: ${NC}"
 read BUILD
 if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     echo -e "\n${FMT_LIM_YELLOW}  Create an account on https://www.like4like.org${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
-    echo -e "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the Username: ${NC}")"
+    echo -e "${FMT_LIM_PURPLE}   └────────Enter the Username: ${NC}"
     read USERNAME
     echo "export LIKE4LIKE_USERNAME=\"$USERNAME\"" >> ~/.zshrc
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
-    echo -e "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the Password: ${NC}")"
+    echo -e "${FMT_LIM_PURPLE}   └────────Enter the Password: ${NC}"
     read PASSWORD
     echo "export LIKE4LIKE_PASSWORD=\"$PASSWORD\"" >> ~/.zshrc
     echo -e "\n${FMT_LIM_YELLOW}  create fake accounts${NC}    ⚠️ \n"
@@ -79,7 +79,7 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
 
     echo -e "\n${FMT_LIM_YELLOW}  Prepare the discord WEbHOOK${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
-    echo -e "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the discord Webhook: ${NC}")"
+    echo -e "${FMT_LIM_PURPLE}   └────────Enter the discord Webhook: ${NC}"
     read WEBHOOK
     echo "export DISCORD_WEBHOOK_URL=\"$WEBHOOK\"" >> ~/.zshrc
 fi
