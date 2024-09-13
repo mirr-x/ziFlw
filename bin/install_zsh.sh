@@ -43,16 +43,16 @@ mkdir -p "$CONFIG_DIR"
 
 # Fill the environment variables
 echo -e "$(echo -e ${FMT_BOLD}Do you want to build the project? [Y/n]: ${NC})"
-read BUILD
-if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
+read -r BUILD
+if [[ "$BUILD" == "Y" || "$BUILD" == "y" ]]; then
     echo -e "\n${FMT_LIM_YELLOW}  Create an account on https://www.like4like.org${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     echo -e "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the Username: ${NC}")"
-    read USERNAME
+    read -r USERNAME
     echo "export LIKE4LIKE_USERNAME=\"$USERNAME\"" >> ~/.zshrc
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     echo -e "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the Password: ${NC}")"
-    read PASSWORD
+    read -r PASSWORD
     echo "export LIKE4LIKE_PASSWORD=\"$PASSWORD\"" >> ~/.zshrc
     echo -e "\n${FMT_LIM_YELLOW}  create fake accounts${NC}    ⚠️ \n"
 
@@ -60,27 +60,27 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     echo -e "${FMT_LIM_PINK}   └────────Enter the Twitter Cookies (JSON): ${NC}"
     echo -e "${FMT_LIM_PINK}   └────────Press Ctrl+D for EOF${NC}"
     TWITTER_COOKIES=$(cat)
-    mkdir -p $X_COOKIEPATH && touch $X_COOKIEPATH/X_cookie.json
-    echo "$TWITTER_COOKIES" > $X_COOKIEPATH/X_cookie.json
+    mkdir -p "$X_COOKIEPATH" && touch "$X_COOKIEPATH/X_cookie.json"
+    echo "$TWITTER_COOKIES" > "$X_COOKIEPATH/X_cookie.json"
 
     # Read multi-line input for Instagram cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Instagram Cookies (JSON): ${NC}"
     echo -e "${FMT_LIM_PINK}   └────────Press Ctrl+D for EOF${NC}"
     INSTAGRAM_COOKIES=$(cat)
-    mkdir -p $IG_COOKIEPATH && touch $IG_COOKIEPATH/IG_cookie.json
-    echo "$INSTAGRAM_COOKIES" > $IG_COOKIEPATH/IG_cookie.json
+    mkdir -p "$IG_COOKIEPATH" && touch "$IG_COOKIEPATH/IG_cookie.json"
+    echo "$INSTAGRAM_COOKIES" > "$IG_COOKIEPATH/IG_cookie.json"
 
     # Read multi-line input for Facebook cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Facebook Cookies (JSON): ${NC}"
     echo -e "${FMT_LIM_PINK}   └────────Press Ctrl+D for EOF${NC}"
     FACEBOOK_COOKIES=$(cat)
-    mkdir -p $FB_COOKIEPATH && touch $FB_COOKIEPATH/FB_cookie.json
-    echo "$FACEBOOK_COOKIES" > $FB_COOKIEPATH/FB_cookie.json
+    mkdir -p "$FB_COOKIEPATH" && touch "$FB_COOKIEPATH/FB_cookie.json"
+    echo "$FACEBOOK_COOKIES" > "$FB_COOKIEPATH/FB_cookie.json"
 
-    echo -e "\n${FMT_LIM_YELLOW}  Prepare the discord WEbHOOK${NC}    ⚠️ "
+    echo -e "\n${FMT_LIM_YELLOW}  Prepare the discord Webhook${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     echo -e "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the discord Webhook: ${NC}")"
-    read WEBHOOK
+    read -r WEBHOOK
     echo "export DISCORD_WEBHOOK_URL=\"$WEBHOOK\"" >> ~/.zshrc
 fi
 source ~/.zshrc
@@ -88,8 +88,8 @@ source ~/.zshrc
 sleep 1
 
 # Move the binary to the bin directory
-chmod +x $EXE
-sudo ln -s $EXE /usr/bin/ziflw
+chmod +x "$EXE"
+sudo ln -s "$EXE" /usr/bin/ziflw
 
 sleep 1
 
@@ -108,17 +108,17 @@ if [ -d "$TARGET_DIR" ]; then
 ${FMT_LIM_PURPLE}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                                                                           ${FMT_LIM_PURPLE}X
                                                                           ${FMT_LIM_PURPLE}X
-        ${FMT_LIM_ORANGE}• USAGE:${NC}                                                          ${FMT_LIM_PURPLE}X
+        ${FMT_LIM_YELLOW}• USAGE:${NC}                                                          ${FMT_LIM_PURPLE}X
             ${FMT_LIM_RED}$ ${NC} ziflw                                                      ${FMT_LIM_PURPLE}X
                                                                           X
                                                                           X
 ${FMT_LIM_PURPLE}--------------------------------------------------------------------------%
-${YELLOW}[${NC}                                                                         ${FMT_LIM_PURPLE}|
-    ${PURPLE}{${NC}                                                                     ${FMT_LIM_PURPLE}|
-        ${BLUE}\"Made By\"${NC}: ${GREEN}\"mirr-x\"${NC},                                              ${FMT_LIM_PURPLE}|
-        ${BLUE}\"Link\"${NC}: ${GREEN}\"https://github.com/mirr-x\"${NC}                               ${FMT_LIM_PURPLE}|
-    ${PURPLE}}${NC}                                                                     ${FMT_LIM_PURPLE}|
-${YELLOW}[${NC}                                                                         ${FMT_LIM_PURPLE}|
+${FMT_LIM_YELLOW}[${NC}                                                                         ${FMT_LIM_PURPLE}|
+    ${FMT_LIM_PURPLE}{${NC}                                                                     ${FMT_LIM_PURPLE}|
+        ${FMT_LIM_BLUE}\"Made By\"${NC}: ${FMT_LIM_GREEN}\"mirr-x\"${NC},                                              ${FMT_LIM_PURPLE}|
+        ${FMT_LIM_BLUE}\"Link\"${NC}: ${FMT_LIM_GREEN}\"https://github.com/mirr-x\"${NC}                               ${FMT_LIM_PURPLE}|
+    ${FMT_LIM_PURPLE}}${NC}                                                                     ${FMT_LIM_PURPLE}|
+${FMT_LIM_YELLOW}[${NC}                                                                         ${FMT_LIM_PURPLE}|
 --------------------------------------------------------------------------%
 ${NC}
 ${NC}"
