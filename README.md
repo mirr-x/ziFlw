@@ -31,12 +31,16 @@
 ```
 
 ## INSTALLATION
+* **FOR `bash` :**
+
+    ```sh
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install_bash.sh)"
+    ```
 * **FOR `zsh` :**
 
     ```sh
-    zsh -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install.sh)"
+    zsh -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install_zsh.sh)"
     ```
-
 
 
 ## LICENSE
