@@ -61,32 +61,32 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
 
     # Read multi-line input for Twitter cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Twitter Cookies (JSON): ${NC}"
-    TWITTER_COOKIES=""
-    while IFS= read -r line; do
-        [[ $line == "" ]] && break
-        TWITTER_COOKIES+="$line\n"
-    done
+    TWITTER_COOKIES=$(cat)
+    # while IFS= read -r line; do
+    #     [[ $line == "" ]] && break
+    #     TWITTER_COOKIES+="$line\n"
+    # done
     mkdir -p $X_COOKIEPATH && touch $X_COOKIEPATH/X_cookie.json
     echo $TWITTER_COOKIES > $X_COOKIEPATH/X_cookie.json
     
 
     # Read multi-line input for Instagram cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Instagram Cookies (JSON): ${NC}"
-    INSTAGRAM_COOKIES=""
-    while IFS= read -r line; do
-        [[ $line == "" ]] && break
-        INSTAGRAM_COOKIES+="$line\n"
-    done
+    INSTAGRAM_COOKIES=$(cat)
+    # while IFS= read -r line; do
+    #     [[ $line == "" ]] && break
+    #     INSTAGRAM_COOKIES+="$line\n"
+    # done
     mkdir -p $IG_COOKIEPATH && touch $IG_COOKIEPATH/IG_cookie.json
     echo $INSTAGRAM_COOKIES > $IG_COOKIEPATH/IG_cookie.json
 
     # Read multi-line input for Facebook cookies
     echo -e "${FMT_LIM_PINK}   └────────Enter the Facebook Cookies (JSON): ${NC}"
     FACEBOOK_COOKIES=""
-    while IFS= read -r line; do
-        [[ $line == "" ]] && break
-        FACEBOOK_COOKIES+="$line\n"
-    done
+    # while IFS= read -r line; do
+    #     [[ $line == "" ]] && break
+    #     FACEBOOK_COOKIES+="$line\n"
+    # done
     mkdir -p $FB_COOKIEPATH && touch $FB_COOKIEPATH/FB_cookie.json
     echo $FACEBOOK_COOKIES > $FB_COOKIEPATH/FB_cookie.json
 
