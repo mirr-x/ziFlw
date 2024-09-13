@@ -115,5 +115,15 @@ ${FMT_LIM_PURPLE}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ${FMT_LIM_PURPLE}--------------------------------------------------------------------------%
 ${YELLOW}[${NC}                                                                         ${FMT_LIM_PURPLE}|
     ${PURPLE}{${NC}                                                                     ${FMT_LIM_PURPLE}|
-"
+        ${BLUE}\"Made By\"${NC}: ${GREEN}\"mirr-x\"${NC},                                              ${FMT_LIM_PURPLE}|
+        ${BLUE}\"Link\"${NC}: ${GREEN}\"https://github.com/mirr-x\"${NC}                               ${FMT_LIM_PURPLE}|
+    ${PURPLE}}${NC}                                                                     ${FMT_LIM_PURPLE}|
+${YELLOW}[${NC}                                                                         ${FMT_LIM_PURPLE}|
+--------------------------------------------------------------------------%
+${NC}
+${NC}"
+
+else
+    echo -e "\n\n${FMT_LIM_RED}Failed to clone the repository.${NC}"
+    exit 1
 fi
