@@ -53,10 +53,10 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     echo -e "\n${FMT_LIM_YELLOW}  Create an account on https://www.like4like.org${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     read -p "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the Username: ${NC}")" USERNAME
-    echo "export LIKE4LIKE_USERNAME=\"$USERNAME\"" >> ~/.bashrc
+    echo "export LIKE4LIKE_USERNAME=\"$USERNAME\"" >> ~/.zshrc
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     read -p "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the Password: ${NC}")" PASSWORD
-    echo "export LIKE4LIKE_PASSWORD=\"$PASSWORD\"" >> ~/.bashrc
+    echo "export LIKE4LIKE_PASSWORD=\"$PASSWORD\"" >> ~/.zshrc
     echo -e "\n${FMT_LIM_YELLOW}  create fake accounts${NC}    ⚠️ \n"
 
     # Read multi-line input for Twitter cookies
@@ -84,9 +84,9 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     echo -e "\n${FMT_LIM_YELLOW}  Prepare the discord WEbHOOK${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     read -p "$(echo -e "${FMT_LIM_PURPLE}   └────────Enter the discord Webhook: ${NC}")" WEBHOOK
-    echo "export DISCORD_WEBHOOK_URL=\"$WEBHOOK\"" >> ~/.bashrc
+    echo "export DISCORD_WEBHOOK_URL=\"$WEBHOOK\"" >> ~/.zshrc
 fi
-source ~/.bashrc
+source ~/.zshrc
 
 sleep 1
 
