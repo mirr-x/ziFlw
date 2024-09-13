@@ -31,10 +31,10 @@
 ```
 
 ## INSTALLATION
-* **FOR `bash` :**
+* **FOR `zsh` :**
 
     ```sh
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install.sh)"
+    zsh -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install.sh)"
     ```
 
 
