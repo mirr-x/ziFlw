@@ -42,6 +42,31 @@
     zsh -c "$(curl -fsSL https://raw.githubusercontent.com/mirr-x/ziFlw/master/bin/install_zsh.sh)"
     ```
 
+```sh
+·▄▄▄▄•▪  ·▄▄▄      ▄▄▌  ▄▄▌        ▄▄▌ ▐ ▄▌
+▪▀·.█▌██ ▐▄▄·▪     ██•  ██•  ▪     ██· █▌▐█
+▄█▀▀▀•▐█·██▪  ▄█▀▄ ██▪  ██▪   ▄█▀▄ ██▪▐█▐▐▌
+█▌▪▄█▀▐█▌██▌.▐█▌.▐▌▐█▌▐▌▐█▌▐▌▐█▌.▐▌▐█▌██▐█▌
+·▀▀▀ •▀▀▀▀▀▀  ▀█▄▀▪.▀▀▀ .▀▀▀  ▀█▄▀▪ ▀▀▀▀ ▀▪   
+                                   
+                                ....is now installed!
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                                                          X
+                                                                          X
+        • USAGE:                                                          X
+            $  ziflw                                                      X
+                                                                          X
+                                                                          X
+--------------------------------------------------------------------------%
+[                                                                         |
+    {                                                                     |
+        "Made By": "mirr-x",                                              |
+        "Link": "https://github.com/mirr-x"                               |
+    }                                                                     |
+[                                                                         |
+--------------------------------------------------------------------------%
+```
 
 ## LICENSE
 

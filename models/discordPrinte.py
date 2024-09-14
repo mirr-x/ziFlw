@@ -6,7 +6,7 @@ import os
 class PrinteDiscord:
     def __init__(self, data):
         self.data = {"content": data}  # Ensure data is in the correct format
-        self.url = os.environ['DISCORD_WEBHOOK_URL']
+        self.url = os.environ.get('DISCORD_WEBHOOK_URL')
         self.send()
 
     def send(self):

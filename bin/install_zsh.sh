@@ -54,8 +54,8 @@ if [ "$BUILD" = "Y" ] || [ "$BUILD" = "y" ]; then
     echo -e "\n${FMT_LIM_YELLOW}  Create an account on https://www.like4like.org${NC}    ⚠️ "
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     echo -e "${FMT_LIM_PURPLE}   └────────Enter the Username: ${NC}"
-    read USERNAME
-    echo "export LIKE4LIKE_USERNAME=\"$USERNAME\"" >> ~/.zshrc
+    read USERNAMEX
+    echo "export LIKE4LIKE_USERNAME=\"$USERNAMEX\"" >> ~/.zshrc
     echo -e "   ${FMT_LIM_PURPLE}│${NC}"
     echo -e "${FMT_LIM_PURPLE}   └────────Enter the Password: ${NC}"
     read PASSWORD
